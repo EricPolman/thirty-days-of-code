@@ -1,10 +1,11 @@
 # #100DaysOfCode
+
 This is my attempt at doing a #100DaysOfCode challenge. My submissions will be experiments across the stack, all using TypeScript. This will likely include Angular, React, React Native, and NestJS.
 
 The goal of this challenge is to explore new libraries, strengthen my TypeScript skills, build a better GitHub profile, and rediscover programming as a hobby.
 
-
 ## Submissions
+
 **Day 1**: React Hooks - Usage & Creation\
 **Day 2**:\
 **Day 3**:\
@@ -107,7 +108,9 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 **Day 100**:
 
 ## Interesting topics
+
 ### General
+
 - Advanced JavaScript/TypeScript features
 - Test frameworks
 - SOLID improvements (general architecture)
@@ -118,22 +121,34 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 - Web components
 - Webpack
 - NPM packaging
+- Server-side rendering
+- Refs
+- CSS Grids
+- Prettier / ESLint / TSLint configurations
+
 ### React
+
 - Hooks
 - Context
 - Animations
 - Alternatives to Redux
 - Event handling
 - StyledComponents
+
 ### React Native
+
 - Native modules
 - Animations
 - Monorepository with Lerna (and Haul)
+
 ### Angular
+
 - Lazy loading
 - Animations
 - NgRx
+
 ### NestJS
+
 - File uploads
 - Real-time communication
 - Access Control / Authorization
