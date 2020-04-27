@@ -7,7 +7,7 @@ import { ConfigContext } from "./App";
 const SignMeUp = ({ signupCallback }) => {
   useEffect(() => {
     console.log(`SignMeUp:useEffect called`);
-  });
+  }, []);
 
   const [email, setEmail] = useState();
   const [emailValid, setEmailValid] = useState(false);
