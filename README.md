@@ -6,7 +6,7 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 
 ## Submissions
 
-**Day 1**: React Hooks - Usage & Creation\
+**Day 1**: React Hooks - Basic usage\
 **Day 2**:\
 **Day 3**:\
 **Day 4**:\
