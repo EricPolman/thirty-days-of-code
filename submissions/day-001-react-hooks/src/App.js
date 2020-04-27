@@ -5,7 +5,7 @@ import Speakers from "./Speakers";
 export const ConfigContext = React.createContext();
 
 const configValue = {
-  showSpeakerSpeakingDays: false,
+  showSpeakerSpeakingDays: true,
   showSignMeUp: false,
 };
 
