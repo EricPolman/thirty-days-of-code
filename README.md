@@ -104,4 +104,37 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 **Day 97**:\
 **Day 98**:\
 **Day 99**:\
-**Day 100**
+**Day 100**:
+
+## Interesting topics
+### General
+- Advanced JavaScript/TypeScript features
+- Test frameworks
+- SOLID improvements (general architecture)
+- RxJS
+- Monorepository / Shared logic
+- Service workers
+- Storybook
+- Web components
+- Webpack
+- NPM packaging
+### React
+- Hooks
+- Context
+- Animations
+- Alternatives to Redux
+- Event handling
+- StyledComponents
+### React Native
+- Native modules
+- Animations
+- Monorepository with Lerna (and Haul)
+### Angular
+- Lazy loading
+- Animations
+- NgRx
+### NestJS
+- File uploads
+- Real-time communication
+- Access Control / Authorization
+- Video streaming
