@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
-
 import { ConfigContext } from "./App";
 
 const SignMeUp = ({ signupCallback }) => {
   useEffect(() => {
-    console.log(`SignMeUp:useEffect called`);
-  }, []);
+    //console.log(`SignMeUp:useEffect called`);
+  });
 
   const [email, setEmail] = useState();
   const [emailValid, setEmailValid] = useState(false);
@@ -26,8 +25,8 @@ const SignMeUp = ({ signupCallback }) => {
 
   function sendEmailToBackend() {
     setSendProcessing(true);
-    new Promise(function (resolve) {
-      setTimeout(function () {
+    new Promise(function(resolve) {
+      setTimeout(function() {
         setSendProcessing(false);
         setEmail("");
         resolve();
@@ -43,35 +42,32 @@ const SignMeUp = ({ signupCallback }) => {
 
   //console.log("src/SignMeUp called");
 
-  return (
+  return context.showSignMeUp === false ? null : (
     <div className="container">
       <div>
         <ToastContainer />
-        {context.showSignMeUp && (
-          <div className="content">
-            <input
-              value={email}
-              onChange={(e) => {
-                setEmailValid(validateEmail(e.target.value));
-                return setEmail(e.target.value);
-              }}
-              placeholder="Enter Email"
-              type="email"
-              name="email"
-              required
-              required
-            />
-            &nbsp;
-            <button
-              disabled={!emailValid || sendProcessing}
-              className="btn"
-              onClick={sendEmailToBackend}
-              type="submit"
-            >
-              {buttonText}
-            </button>
-          </div>
-        )}
+        <div className="content">
+          <input
+            value={email}
+            onChange={e => {
+              setEmailValid(validateEmail(e.target.value));
+              return setEmail(e.target.value);
+            }}
+            placeholder="Enter Email"
+            type="email"
+            name="email"
+            required
+          />
+          &nbsp;
+          <button
+            disabled={!emailValid || sendProcessing}
+            className="btn"
+            onClick={sendEmailToBackend}
+            type="submit"
+          >
+            {buttonText}
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,0 @@
-{
-  "extends": ["tslint:latest", "tslint-react", "tslint-react-hooks"],
-  "rules": {
-    "react-hooks-nesting": "error"
-  }
-}
