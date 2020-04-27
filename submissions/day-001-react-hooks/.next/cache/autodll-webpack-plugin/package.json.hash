@@ -1,0 +1,1 @@
+{"name":"day-001-react-hooks","version":"1.0.0","main":"index.js","license":"MIT","scripts":{"dev":"next","build":"next build","start":"next start"},"dependencies":{"next":"^9.3.5","react":"^16.13.1","react-dom":"^16.13.1"},"devDependencies":{"@types/react":"^16.9.34"},"readme":"ERROR: No README data found!","_id":"day-001-react-hooks@1.0.0"}
