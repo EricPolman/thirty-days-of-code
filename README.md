@@ -125,6 +125,7 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 - Refs
 - CSS Grids
 - Prettier / ESLint / TSLint configurations
+- Closures
 
 ### React
 
