@@ -135,6 +135,7 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 - Alternatives to Redux
 - Event handling
 - StyledComponents
+- Theming
 
 ### React Native
 
