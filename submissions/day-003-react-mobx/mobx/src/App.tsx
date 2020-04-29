@@ -1,29 +1,49 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
-import { TodosStore, Todo } from "./todos.store";
-import { observe, reaction } from "mobx";
+import { todosStore, LoadingState } from "./todos.store";
+import { observer } from "mobx-react";
+import TodoItem from "./TodoItem";
 
-const todosStore = new TodosStore();
+todosStore.loadTodos();
 
 function App() {
-  const [todos, setTodos] = useState<Todo[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  useEffect(() => {
-    observe(todosStore.todos, () => {
-      setTodos([...todosStore.todos]);
-      setLoading(false);
-    });
-    todosStore.loadTodos();
-  }, []);
+  const [newTodo, setNewTodo] = useState("");
 
   return (
     <div className="App">
-      {loading ? (
+      <h1>Todo List</h1>
+      {todosStore.loadingState === LoadingState.INITIAL ? (
+        <div>
+          <div>No todos loaded yet.</div>
+          <div>
+            <button onClick={todosStore.loadTodos}>Load todos</button>
+          </div>
+        </div>
+      ) : todosStore.loadingState === LoadingState.LOADING ? (
         <div>Loading...</div>
       ) : (
         <ul>
-          {todos.map((todo) => (
-            <li key={todo.id}>{todo.title}</li>
+          <li className="todo-list-item todo-list-item-form">
+            <div>
+              <label>New item</label>
+              <br />
+              <input
+                value={newTodo}
+                onChange={(event) => setNewTodo(event.target.value)}
+              />
+              <button
+                onClick={() => {
+                  todosStore.addTodo(newTodo);
+                  setNewTodo("");
+                }}
+              >
+                Save
+              </button>
+            </div>
+          </li>
+
+          {todosStore.todos.map((todo) => (
+            <TodoItem key={todo.id} todo={todo} />
           ))}
         </ul>
       )}
@@ -31,4 +51,4 @@ function App() {
   );
 }
 
-export default App;
+export default observer(App);

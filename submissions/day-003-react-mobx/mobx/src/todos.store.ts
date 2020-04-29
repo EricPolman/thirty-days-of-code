@@ -7,27 +7,39 @@ export interface Todo {
   completed: boolean;
 }
 
+export enum LoadingState {
+  INITIAL,
+  LOADING,
+  COMPLETE,
+}
+
 export class TodosStore {
   @observable todos: Todo[] = [];
+  @observable loadingState: LoadingState = LoadingState.INITIAL;
 
-  constructor() {
-    autorun(() => console.log(this.lastTodo));
-  }
-
-  loadTodos() {
+  loadTodos = () => {
+    this.loadingState = LoadingState.LOADING;
     setTimeout(
       () =>
         fetch("https://jsonplaceholder.typicode.com/todos")
           .then((response) => response.json())
-          .then((json) => json.forEach((todo: Todo) => this.todos.push(todo))),
-      1000
+          .then((json) => {
+            const todos = json.slice(0, 10);
+            todos.forEach((todo: Todo) => this.todos.push(todo));
+            this.loadingState = LoadingState.COMPLETE;
+          }),
+      300
     );
-  }
+  };
 
-  @computed get lastTodo() {
-    if (this.todos.length === 0) {
-      return "No todo's loaded yet.";
-    }
-    return `Last todo: ${this.todos[this.todos.length - 1].title}`;
-  }
+  addTodo = (title: string) => {
+    this.todos.push({
+      title,
+      id: Math.round(Math.random() * 9999999 + 100000),
+      userId: 1,
+      completed: false,
+    });
+  };
 }
+
+export const todosStore = new TodosStore();
