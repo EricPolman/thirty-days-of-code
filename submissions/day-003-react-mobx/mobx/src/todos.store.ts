@@ -9,20 +9,19 @@ export interface Todo {
 
 export class TodosStore {
   @observable todos: Todo[] = [];
-  @observable loading: boolean = false;
 
   constructor() {
     autorun(() => console.log(this.lastTodo));
   }
 
   loadTodos() {
-    this.loading = true;
-    fetch("https://jsonplaceholder.typicode.com/todos")
-      .then((response) => response.json())
-      .then((json) => {
-        this.todos = json;
-        this.loading = false;
-      });
+    setTimeout(
+      () =>
+        fetch("https://jsonplaceholder.typicode.com/todos")
+          .then((response) => response.json())
+          .then((json) => json.forEach((todo: Todo) => this.todos.push(todo))),
+      1000
+    );
   }
 
   @computed get lastTodo() {
