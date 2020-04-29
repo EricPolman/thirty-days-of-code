@@ -1,4 +1,5 @@
-import { observable, computed, autorun } from "mobx";
+import { observable } from "mobx";
+import alertsStore from "./alerts.store";
 
 export interface Todo {
   id: number;
@@ -27,6 +28,11 @@ export class TodosStore {
             const todos = json.slice(0, 10);
             todos.forEach((todo: Todo) => this.todos.push(todo));
             this.loadingState = LoadingState.COMPLETE;
+            alertsStore.push({
+              title: "Todos loaded",
+              duration: 3000,
+              display: true,
+            });
           }),
       300
     );
@@ -38,6 +44,11 @@ export class TodosStore {
       id: Math.round(Math.random() * 9999999 + 100000),
       userId: 1,
       completed: false,
+    });
+    alertsStore.push({
+      title: "Todo added",
+      duration: 3000,
+      display: true,
     });
   };
 }

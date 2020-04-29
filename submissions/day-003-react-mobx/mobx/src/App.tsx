@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { todosStore, LoadingState } from "./todos.store";
 import { observer } from "mobx-react";
 import TodoItem from "./TodoItem";
-
-todosStore.loadTodos();
+import AlertHandler from "./AlertHandler";
 
 function App() {
   const [newTodo, setNewTodo] = useState("");
+  useEffect(() => {
+    todosStore.loadTodos();
+  }, []);
 
   return (
     <div className="App">
@@ -47,6 +49,7 @@ function App() {
           ))}
         </ul>
       )}
+      <AlertHandler />
     </div>
   );
 }
