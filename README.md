@@ -9,7 +9,7 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 **Day 1**: React Hooks - Basic usage\
 **Day 2**: React Hooks - Creation (Dark Mode)\
 **Day 3**: React with MobX\
-**Day 4**:\
+**Day 4**: Error Handling\
 **Day 5**:\
 **Day 6**:\
 **Day 7**:\

@@ -1,5 +1,5 @@
 export class Ok<ResultType, ErrorTypes> {
-  constructor(public readonly value: ResultType) {}
+  constructor(public readonly data: ResultType) {}
 
   isOk(): this is Ok<ResultType, ErrorTypes> {
     return true;
@@ -11,7 +11,7 @@ export class Ok<ResultType, ErrorTypes> {
 }
 
 export class Err<ResultType, ErrorTypes> {
-  constructor(public readonly value: ErrorTypes) {}
+  constructor(public readonly data: ErrorTypes) {}
 
   isOk(): this is Ok<ResultType, ErrorTypes> {
     return false;
@@ -27,13 +27,13 @@ export type Result<ResultType, ErrorTypes> =
   | Err<ResultType, ErrorTypes>;
 
 export const ok = <ResultType, ErrorTypes>(
-  l: ResultType
+  res: ResultType
 ): Result<ResultType, ErrorTypes> => {
-  return new Ok(l);
+  return new Ok(res);
 };
 
 export const err = <ResultType, ErrorTypes>(
-  a: ErrorTypes
+  error: ErrorTypes
 ): Result<ResultType, ErrorTypes> => {
-  return new Err<ResultType, ErrorTypes>(a);
+  return new Err<ResultType, ErrorTypes>(error);
 };
