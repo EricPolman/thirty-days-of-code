@@ -6,7 +6,7 @@ Today I am looking into an alternative to Redux. What bothers me about Redux is 
 
 There are alternatives to MobX which will definitely be explored on other days, but today's focus is on setting up a basic React app with MobX. A problem I definitely want to tackle today is when and how to display toasts, preferrably without a deep integration between React and MobX.
 
-## Conclusion
+## Result
 
 The result for today is an app in which you can load, change and add todos using MobX for state managemente. When loading and adding todos, an alert is pushed to the AlertsStore, which is processed by an AlertHandler component.
 

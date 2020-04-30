@@ -1,35 +1,35 @@
-export enum ErrorCode {
+export enum ErrorType {
   BadRequest = "BadRequest",
   Unauthenticated = "Unauthenticated",
   Unauthorized = "Unauthorized",
   InternalServerError = "InternalServerError",
 }
 
-export class BaseError<EC extends ErrorCode> extends Error {
-  constructor(public code: EC) {
+export class BaseError<ET extends ErrorType> extends Error {
+  constructor(public type: ET) {
     super("unspecified error");
   }
 }
 
-export class BadRequestError extends BaseError<ErrorCode.BadRequest> {
+export class BadRequestError extends BaseError<ErrorType.BadRequest> {
   constructor(public problems: string[]) {
-    super(ErrorCode.BadRequest);
+    super(ErrorType.BadRequest);
     this.message = "Bad request";
   }
 }
 
-export class UnauthenticatedError extends BaseError<ErrorCode.Unauthenticated> {
+export class UnauthenticatedError extends BaseError<ErrorType.Unauthenticated> {
   constructor(public loginUrl: string) {
-    super(ErrorCode.Unauthenticated);
+    super(ErrorType.Unauthenticated);
     this.message = "Unauthenticated";
   }
 }
 
 export class InternalServerError extends BaseError<
-  ErrorCode.InternalServerError
+  ErrorType.InternalServerError
 > {
-  constructor() {
-    super(ErrorCode.InternalServerError);
+  constructor(public status: number) {
+    super(ErrorType.InternalServerError);
     this.message = "Internal Server Error";
   }
 }
