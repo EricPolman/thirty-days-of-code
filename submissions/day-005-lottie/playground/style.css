@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 999;
 }
 
 #loading-animation-container {
@@ -48,4 +49,16 @@ nav .nav-header {
 
 li[data-weather-type] {
   width: 100%;
+}
+
+content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#weather-animation-container {
+  width: 500px;
+  height: 500px;
 }
