@@ -10,8 +10,21 @@
   <body>
     <div id="loading-wrapper"></div>
     <div id="root">
-      <nav>Sidenav</nav>
-      <content>Content</content>
+      <nav>
+        <ul>
+          <li data-weather-type="sunny">Sunny</li>
+          <li data-weather-type="partlyCloudy">Cloudy</li>
+          <li data-weather-type="windy">Clouded</li>
+          <li data-weather-type="night">Night</li>
+          <li data-weather-type="storm">Storm</li>
+          <li data-weather-type="snow">Snow</li>
+          <li data-weather-type="partlyShower">Rainy day</li>
+          <li data-weather-type="rainynight">Rainy night</li>
+        </ul>
+      </nav>
+      <content>
+        <div id="weather-animation-container"></div>
+      </content>
     </div>
     <script src="./index.ts"></script>
   </body>
