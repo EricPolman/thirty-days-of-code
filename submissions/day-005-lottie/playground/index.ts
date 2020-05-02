@@ -1,4 +1,5 @@
 import Lottie from "lottie-web";
+import animationData from "./animations/19302-surfline-spinner.json";
 
 const loadingWrapper = document.getElementById("loading-wrapper");
 const animationContainer = document.createElement("div");
@@ -8,15 +9,15 @@ loadingText.innerHTML = "Loading the weather";
 loadingWrapper.appendChild(animationContainer);
 loadingWrapper.appendChild(loadingText);
 
-const animation = Lottie.loadAnimation({
+const loadingAnimation = Lottie.loadAnimation({
   container: animationContainer, // the dom element that will contain the animation
   renderer: "svg",
   loop: true,
   autoplay: true,
-  path: "animations/19302-surfline-spinner.json", // the path to the animation json
+  animationData: animationData, // the path to the animation json
 });
 
 setTimeout(() => {
-  animation.pause();
+  loadingAnimation.pause();
   loadingWrapper.style.opacity = "0";
-}, 2000);
+}, 200);
