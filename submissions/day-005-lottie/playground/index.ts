@@ -34,9 +34,7 @@ function showWeatherAnimation(weatherType: WeatherAnimationType) {
 
   const animationData = getWeatherAnimation(weatherType);
 
-  console.log(weatherAnimationContainer, weatherType, animationData);
-
-  const weatherAnimation = Lottie.loadAnimation({
+  Lottie.loadAnimation({
     container: weatherAnimationContainer, // the dom element that will contain the animation
     renderer: "svg",
     loop: true,
@@ -46,23 +44,8 @@ function showWeatherAnimation(weatherType: WeatherAnimationType) {
 }
 
 function showForecast(forecast: ForecastBase) {
-  const weatherAnimationContainer = document.getElementById(
-    "weather-animation-container"
-  );
-  weatherAnimationContainer.innerHTML = "";
-
   const weatherType = getWeatherTypeFromIcon(forecast.weather[0].icon);
-  const animationData = getWeatherAnimation(weatherType);
-
-  console.log(weatherAnimationContainer, weatherType, animationData);
-
-  const weatherAnimation = Lottie.loadAnimation({
-    container: weatherAnimationContainer, // the dom element that will contain the animation
-    renderer: "svg",
-    loop: true,
-    autoplay: true,
-    animationData,
-  });
+  showWeatherAnimation(weatherType);
 }
 
 function getLocation(locationResult: PositionCallback): void {
@@ -75,13 +58,17 @@ function getLocation(locationResult: PositionCallback): void {
 
 function setupCallbacks() {
   const listItems = document.querySelectorAll("[data-weather-type]");
-  console.log(listItems);
   listItems.forEach((element) => {
     const weatherType: WeatherAnimationType = element.getAttribute(
       "data-weather-type"
     ) as WeatherAnimationType;
-    console.log(weatherType);
-    element.addEventListener("click", () => showWeatherAnimation(weatherType));
+    element.addEventListener("click", () => {
+      showWeatherAnimation(weatherType);
+      document
+        .querySelectorAll(".active")
+        .forEach((e) => e.classList.remove("active"));
+      element.classList.add("active");
+    });
   });
 }
 
