@@ -10,7 +10,7 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 **Day 2**: React Hooks - Creation (Dark Mode)\
 **Day 3**: React with MobX\
 **Day 4**: Error Handling\
-**Day 5**:\
+**Day 5**: Lottie animations\
 **Day 6**:\
 **Day 7**:\
 **Day 8**:\

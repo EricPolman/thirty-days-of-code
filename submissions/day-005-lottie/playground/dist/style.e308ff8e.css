@@ -1,0 +1,18 @@
+#loading-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#loading-animation-container {
+  width: 200px;
+  height: 200px;
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
