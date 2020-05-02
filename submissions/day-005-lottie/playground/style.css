@@ -24,11 +24,6 @@
   height: 100vh;
 }
 
-#root nav {
-  background-color: #eee;
-  width: 300px;
-}
-
 #root content {
   background-color: white;
   flex-grow: 1;
@@ -37,4 +32,20 @@
 #weather-animation-container {
   width: 300px;
   height: 300px;
+}
+
+#root nav {
+  background-color: #eee;
+  width: 300px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+nav .nav-header {
+  padding: 10px;
+}
+
+li[data-weather-type] {
+  width: 100%;
 }
