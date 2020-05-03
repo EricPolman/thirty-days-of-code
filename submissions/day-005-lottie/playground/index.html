@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <link
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link href="./style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="loading-wrapper"></div>
+    <div id="root">
+      <nav class="nav">
+        <strong class="nav-header">How's the weather?</strong>
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action"
+            data-weather-type="sunny"
+          >
+            Sunny
+          </li>
+          <li
+            class="list-group-item list-group-item-action"
+            data-weather-type="partlyCloudy"
+          >
+            Cloudy
+          </li>
+          <li
+            class="list-group-item list-group-item-action"
+            data-weather-type="windy"
+          >
+            Clouded
+          </li>
+          <li
+            class="list-group-item list-group-item-action"
+            data-weather-type="night"
+          >
+            Night
+          </li>
+          <li
+            class="list-group-item list-group-item-action"
+            data-weather-type="storm"
+          >
+            Storm
+          </li>
+          <li
+            class="list-group-item list-group-item-action"
+            data-weather-type="snow"
+          >
+            Snow
+          </li>
+          <li
+            class="list-group-item list-group-item-action"
+            data-weather-type="partlyShower"
+          >
+            Rainy day
+          </li>
+          <li
+            class="list-group-item list-group-item-action"
+            data-weather-type="rainynight"
+          >
+            Rainy night
+          </li>
+        </ul>
+      </nav>
+      <content>
+        <div id="weather-animation-container"></div>
+      </content>
+    </div>
+    <script src="./index.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.todo-list-item {
+  height: 50px;
+  padding: 5px 15px 5px 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.todo-list-item-form {
+  height: 100px;
+}
+
+.todo-list-item input {
+  width: 100%;
+}
+
+.todo-list-item:hover {
+  background-color: #fcfcfc;
+}
+
+.todo-list-item .completed-button-container button {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #aaa;
+  background: none;
+  margin-right: 10px;
+  margin-top: 13px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.todo-list-item .completed-button-container button:hover {
+  background-color: #eee;
+}
+
+.todo-list-item .completed-button-container button:active {
+  background-color: #ddd;
+}
+
+.completed-check {
+  position: relative;
+  left: -6px;
+  font-size: 150%;
+  font-weight: 800;
+}
