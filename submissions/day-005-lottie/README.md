@@ -1,3 +1,9 @@
+---
+path: "/blog/day-5-lottie-animations"
+date: "2020-05-02"
+title: "Day 5: Lottie animations"
+---
+
 # Day 5: Lottie animations
 
 ## Introduction

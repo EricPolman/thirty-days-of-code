@@ -1,3 +1,9 @@
+---
+path: "/blog/day-6-gatsby-static-site-generation"
+date: "2020-05-03"
+title: "Day 6: Gatsby - Static Site Generation"
+---
+
 # Day 6: Gatsby - Static Site Generation
 
 ## Introduction

@@ -1,3 +1,9 @@
+---
+path: "/blog/day-1-react-hooks-basic-usage"
+date: "2020-04-27"
+title: "Day 1: React Hooks - Basic usage"
+---
+
 # Day 1: React Hooks - Basic usage
 
 Today I experimented with Hooks with the help of a PluralSight course (https://app.pluralsight.com/library/courses/using-react-hooks/table-of-contents). Normally, I prefer class-based components but this course opened my eyes to how much Hooks can simplify components.

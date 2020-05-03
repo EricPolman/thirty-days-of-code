@@ -1,3 +1,9 @@
+---
+path: "/blog/day-3-react-mobx"
+date: "2020-04-29"
+title: "Day 3: React MobX"
+---
+
 # Day 3: React MobX
 
 ## Introduction

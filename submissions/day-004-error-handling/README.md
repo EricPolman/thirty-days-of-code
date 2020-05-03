@@ -1,3 +1,9 @@
+---
+path: "/blog/day-4-error-handling"
+date: "2020-04-30"
+title: "Day 4: Error handling"
+---
+
 # Day 4: Error handling
 
 ## Introduction

@@ -1,3 +1,9 @@
+---
+path: "/blog/day-2-react-hooks-creation"
+date: "2020-04-28"
+title: "Day 2: React Hooks - Creation (Dark Mode hook)"
+---
+
 # Day 2: React Hooks - Creation (Dark Mode hook)
 
 Today I am diving deeper into how Hooks work and am following a tutorial for setting up a hook for toggling an app between dark mode and light mode. ([Tutorial video](https://www.youtube.com/watch?v=BAf0uhKVHBk&feature=youtu.be))
