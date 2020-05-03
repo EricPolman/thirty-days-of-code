@@ -1,1 +1,0 @@
-exports.submissionsRoot = __dirname;

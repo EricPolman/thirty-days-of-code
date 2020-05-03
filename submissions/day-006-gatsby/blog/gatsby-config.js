@@ -12,6 +12,9 @@ module.exports = {
       options: {
         name: `markdown-pages`,
         path: `${__dirname}/../../`,
+        // We want to ignore the blog folder here, as including this will cause a
+        // log spam "info added directory at ... and the files come from other directories anyway.
+        ignore: ["/**/blog/**"],
       },
     },
     `gatsby-transformer-remark`,

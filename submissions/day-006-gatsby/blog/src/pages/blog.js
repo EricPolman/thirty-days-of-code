@@ -6,7 +6,7 @@ import SEO from "../components/seo";
 const BlogListItem = (post) => {
   const { title, date, path } = post.frontmatter;
   return (
-    <li key={path}>
+    <li>
       <Link to={path}>{title}</Link>
       <em>{date}</em>
       <p>{post.excerpt}</p>
@@ -25,7 +25,7 @@ const BlogPage = ({ data }) => {
       <SEO title="Blog" />
       <ul>
         {posts.map((post) => (
-          <BlogListItem {...post} />
+          <BlogListItem key={post.frontmatter.path} {...post} />
         ))}
       </ul>
     </Layout>
@@ -37,6 +37,7 @@ export const pageQuery = graphql`
       filter: {
         fileAbsolutePath: { regex: "/day-[0-9]{3}-[a-zA-Z0-9-]+/README.md/" }
       }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
