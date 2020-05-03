@@ -1,1 +1,1 @@
-export const submissionsRoot = __dirname;
+exports.submissionsRoot = __dirname;
