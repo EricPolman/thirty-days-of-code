@@ -1,33 +1,26 @@
 import React from "react";
-import { Link } from "gatsby";
+import { graphql } from "gatsby";
+import Typography from "@material-ui/core/Typography";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
-
-const BlogListItem = (post) => {
-  const { title, date, path } = post.frontmatter;
-  return (
-    <li>
-      <Link to={path}>{title}</Link>
-      <em>{date}</em>
-      <p>{post.excerpt}</p>
-    </li>
-  );
-};
+import { BlogListItem } from "../components/blog-list-item";
+import "./index.css";
 
 const BlogPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   const posts = edges.map((edge) => edge.node);
 
-  console.log(posts);
-
   return (
     <Layout>
-      <SEO title="Blog" />
-      <ul>
-        {posts.map((post) => (
-          <BlogListItem key={post.frontmatter.path} {...post} />
-        ))}
-      </ul>
+      <div className="blog-page">
+        <Typography variant="h3" component="h1">
+          Blog articles
+        </Typography>
+        <ul>
+          {posts.map((post) => (
+            <BlogListItem key={post.id} {...post} />
+          ))}
+        </ul>
+      </div>
     </Layout>
   );
 };

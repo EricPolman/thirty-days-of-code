@@ -1,5 +1,3 @@
-const root = require("../../submissions-root");
-console.log(root.submissionsRoot);
 module.exports = {
   siteMetadata: {
     title: `Eric Polman - #thirtydaysofcode blog`,
@@ -7,6 +5,8 @@ module.exports = {
     author: `@ericpolman`,
   },
   plugins: [
+    "gatsby-plugin-typescript",
+    "gatsby-plugin-material-ui",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,13 +31,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `eric-polman-dev-blog`,
+        short_name: `polman-blog`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
   ],
