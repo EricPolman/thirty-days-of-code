@@ -11,7 +11,7 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 **Day 3**: React with MobX\
 **Day 4**: Error Handling\
 **Day 5**: Lottie animations\
-**Day 6**:\
+**Day 6**: Gatsby - Static site generation\
 **Day 7**:\
 **Day 8**:\
 **Day 9**:\
@@ -52,6 +52,7 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 - Webpack
 - NPM packaging
 - Server-side rendering
+- Static site generation
 - Refs
 - CSS Grids
 - Closures
