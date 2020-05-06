@@ -26,6 +26,7 @@ export default function BlogTemplate({ data }) {
                 <Button
                   color="primary"
                   size="small"
+                  variant="contained"
                   onClick={() => window.history.back()}
                 >
                   Go back
@@ -37,6 +38,7 @@ export default function BlogTemplate({ data }) {
                   href={githubPath}
                   color="primary"
                   size="small"
+                  variant="contained"
                   target="_blank"
                 >
                   Code on GitHub

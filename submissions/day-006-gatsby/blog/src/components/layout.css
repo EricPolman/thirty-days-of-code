@@ -10,3 +10,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.page-container {
+  padding: 0 1.0875rem 1.45rem;
+}
+
+body.dark-theme {
+  background-color: #333;
+  color: white;
+  margin: 0;
+}
