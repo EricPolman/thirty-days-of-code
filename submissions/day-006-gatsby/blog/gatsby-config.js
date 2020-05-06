@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/thirty-days-of-code/blog/",
+  pathPrefix: "/thirty-days-of-code/",
   siteMetadata: {
     title: `Eric Polman - #thirtydaysofcode blog`,
     description: `A blog containing submissions for my personal #thirtydaysofcode challenge.`,

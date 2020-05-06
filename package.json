@@ -4,7 +4,7 @@
     "react-hooks": "^1.0.1"
   },
   "scripts": {
-    "deploy:blog:github": "cd submissions/day-006-gatsby/blog && gatsby build --prefix-paths && gh-pages -d public"
+    "deploy:blog:github": "cd submissions/day-006-gatsby/blog && npm run build && npm run deploy:github"
   },
   "dependencies": {
     "gatsby-plugin-typescript": "^2.4.0"
