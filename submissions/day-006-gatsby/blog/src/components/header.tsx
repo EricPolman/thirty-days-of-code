@@ -6,14 +6,15 @@ import Brightness4Icon from "@material-ui/icons/Brightness4";
 
 const Header = ({ siteTitle, theme, setTheme }) => {
   return (
-    <AppBar position="static" color="primary">
+    <AppBar position="static" color={theme === "light" ? "primary" : "inherit"}>
       <Toolbar>
-        <Typography variant="h6">
-          <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+        <Typography variant="h6" style={{ flexGrow: 1 }}>
+          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
             {siteTitle}
           </Link>
         </Typography>
         <IconButton
+          style={{ color: "white" }}
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         >
           {theme === "light" ? <Brightness4Icon /> : <Brightness5Icon />}
