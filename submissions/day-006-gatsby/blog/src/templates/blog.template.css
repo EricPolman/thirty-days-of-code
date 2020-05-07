@@ -1,11 +1,19 @@
 .blog-post-container {
   display: flex;
   flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
 }
 @media only screen and (max-width: 600px) {
   .blog-post-container {
     flex-direction: column;
   }
+}
+
+.blog-sidebar {
+  width: 250px;
+  margin-right: 2rem;
+  flex-shrink: 0;
 }
 
 .blog-sidebar .button-container {

@@ -12,7 +12,7 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 **Day 4**: Error Handling\
 **Day 5**: Lottie animations\
 **Day 6**: Gatsby - Static site generation\
-**Day 7**:\
+**Day 7**: Modals with React Portal\
 **Day 8**:\
 **Day 9**:\
 **Day 10**:\

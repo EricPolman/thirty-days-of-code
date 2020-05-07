@@ -24,34 +24,32 @@ export default function BlogTemplate({ data }) {
   return (
     <Layout>
       <div className="blog-post-container">
-        <Container maxWidth="sm">
-          <Card className="blog-sidebar">
-            <CardContent>
-              <Typography variant="caption" display="block" gutterBottom>
-                Posted on {frontmatter.date}
-              </Typography>
-              <div className="button-container">
-                <Button
-                  color="primary"
-                  size="small"
-                  variant="contained"
-                  onClick={() => window.history.back()}
-                >
-                  Go back
-                </Button>
-                <Button
-                  href={githubPath}
-                  color="primary"
-                  size="small"
-                  variant="contained"
-                  target="_blank"
-                >
-                  Code on GitHub
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </Container>
+        <Card className="blog-sidebar">
+          <CardContent>
+            <Typography variant="caption" display="block" gutterBottom>
+              Posted on {frontmatter.date}
+            </Typography>
+            <div className="button-container">
+              <Button
+                color="primary"
+                size="small"
+                variant="contained"
+                onClick={() => window.history.back()}
+              >
+                Go back
+              </Button>
+              <Button
+                href={githubPath}
+                color="primary"
+                size="small"
+                variant="contained"
+                target="_blank"
+              >
+                Code on GitHub
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
         <div className="blog-post">
           <div
             className="blog-post-content"
