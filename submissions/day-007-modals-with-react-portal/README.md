@@ -19,3 +19,7 @@ React introduced a solution to this problem called [Portals](https://reactjs.org
 Today I'll explore some basic modal rendering using React Portals and Bootstrap.
 
 ## Result
+
+The demo allows you to render a modal using either the Portal or just a containing div. The result for the user is the same here, but the DOM is different. When the Portal is used, you can see that the `#modal-root` node is filled instead of it being inserted next to the nodes in App.tsx.
+
+I haven't found a great way to demonstrate the z-indexing issues you might face with a modal that is nested deep in your application, but diving further into portals I did find this cool tutorial / demo: https://medium.com/hackernoon/using-a-react-16-portal-to-do-something-cool-2a2d627b0202. So, not only can you render your content in another DOM node while maintaining context, you can even render it in another window!
