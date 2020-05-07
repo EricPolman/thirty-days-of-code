@@ -56,6 +56,7 @@ export default function BlogTemplate({ data }) {
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
+        <div style={{ width: 300, flexShrink: 0 }} />
       </div>
     </Layout>
   );
