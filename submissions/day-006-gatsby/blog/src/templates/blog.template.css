@@ -1,13 +1,15 @@
 .blog-post-container {
-  margin-top: 30px;
-}
-
-.blog-post-header-list {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .blog-post-container {
+    flex-direction: column;
+  }
+}
+
+.blog-sidebar .button-container {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }

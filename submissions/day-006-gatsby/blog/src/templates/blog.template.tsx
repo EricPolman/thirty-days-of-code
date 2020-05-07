@@ -1,7 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import { Button } from "@material-ui/core";
+import {
+  Button,
+  Card,
+  CardContent,
+  Typography,
+  Container,
+} from "@material-ui/core";
 import "./blog.template.css";
 
 const githubBaseUrl =
@@ -14,15 +20,17 @@ export default function BlogTemplate({ data }) {
   const githubPath = `${githubBaseUrl}/submissions/${fileAbsolutePath
     .split("/submissions/")[1]
     .replace("/README.md", "")}`;
-  console.log(githubPath);
 
   return (
     <Layout>
       <div className="blog-post-container">
-        <div className="blog-post">
-          <div>
-            <ul className="blog-post-header-list">
-              <li>
+        <Container maxWidth="sm">
+          <Card className="blog-sidebar">
+            <CardContent>
+              <Typography variant="caption" display="block" gutterBottom>
+                Posted on {frontmatter.date}
+              </Typography>
+              <div className="button-container">
                 <Button
                   color="primary"
                   size="small"
@@ -31,9 +39,6 @@ export default function BlogTemplate({ data }) {
                 >
                   Go back
                 </Button>
-              </li>
-              <li>{frontmatter.date}</li>
-              <li>
                 <Button
                   href={githubPath}
                   color="primary"
@@ -43,9 +48,11 @@ export default function BlogTemplate({ data }) {
                 >
                   Code on GitHub
                 </Button>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </CardContent>
+          </Card>
+        </Container>
+        <div className="blog-post">
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
