@@ -16,6 +16,8 @@ code {
   color: #673ab7;
   padding: 2px 4px;
   background-color: #ccc;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 .page-container {
