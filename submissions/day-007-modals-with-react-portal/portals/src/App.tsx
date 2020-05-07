@@ -9,7 +9,7 @@ function App() {
   const [counter, setCounter] = useState(0);
 
   return (
-    <div className="App" style={{ backgroundColor: "red" }}>
+    <div className="App">
       <button onClick={() => setUsePortal(!usePortal)}>
         {usePortal ? "Don't use " : "Use"} portal
       </button>
@@ -30,7 +30,6 @@ function App() {
         )}
       </div>
       <div>Confirms pressed: {counter}</div>
-      <img src="https://placehold.it/500x500/" />
     </div>
   );
 }
