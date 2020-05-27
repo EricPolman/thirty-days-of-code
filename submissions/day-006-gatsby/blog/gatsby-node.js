@@ -5,8 +5,7 @@
  */
 const path = require(`path`);
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
+async function createFromMarkdown(createPage, graphql, reporter) {
   const blogPostTemplate = path.resolve(`src/templates/blog.template.tsx`);
   const result = await graphql(`
     {
@@ -28,6 +27,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       }
     }
   `);
+
   // Handle errors
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
@@ -40,4 +40,39 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {}, // additional data can be passed via context
     });
   });
+}
+
+async function createFromStrapi(createPage, graphql, reporter) {
+  const pageTemplate = path.resolve(`src/templates/page.template.tsx`);
+  const result = await graphql(`
+    {
+      allStrapiPost {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+      }
+    }
+  `);
+
+  // Handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
+  }
+  result.data.allStrapiPost.edges.forEach(({ node }) => {
+    createPage({
+      path: node.slug,
+      component: pageTemplate,
+      context: { slug: node.slug }, // additional data can be passed via context
+    });
+  });
+}
+
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions;
+  createFromMarkdown(createPage, graphql, reporter);
+  createFromStrapi(createPage, graphql, reporter);
 };

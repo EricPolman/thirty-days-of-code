@@ -37,5 +37,13 @@ module.exports = {
         start_url: `/`,
       },
     },
+    {
+      resolve: "gatsby-source-strapi",
+      options: {
+        apiURL: "http://localhost:1337",
+        contentTypes: ["post"],
+        queryLimit: 1000,
+      },
+    },
   ],
 };
