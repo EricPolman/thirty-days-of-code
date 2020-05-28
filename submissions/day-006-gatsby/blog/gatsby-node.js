@@ -47,11 +47,9 @@ async function createFromStrapi(createPage, graphql, reporter) {
   const result = await graphql(`
     {
       allStrapiPost {
-        edges {
-          node {
-            id
-            slug
-          }
+        nodes {
+          id
+          slug
         }
       }
     }
@@ -62,7 +60,7 @@ async function createFromStrapi(createPage, graphql, reporter) {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
     return;
   }
-  result.data.allStrapiPost.edges.forEach(({ node }) => {
+  result.data.allStrapiPost.nodes.forEach((node) => {
     createPage({
       path: node.slug,
       component: pageTemplate,

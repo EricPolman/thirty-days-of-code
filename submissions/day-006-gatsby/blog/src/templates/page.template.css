@@ -1,7 +1,7 @@
 .blog-post-container {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 @media only screen and (max-width: 600px) {

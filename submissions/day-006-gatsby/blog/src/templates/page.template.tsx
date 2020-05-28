@@ -3,8 +3,12 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import "./page.template.css";
 
+import MarkdownIt from "markdown-it";
+
 export default function PageTemplate({ data }) {
   const { strapiPost } = data;
+  const { body } = strapiPost;
+  const md = new MarkdownIt();
 
   return (
     <Layout>
@@ -12,7 +16,10 @@ export default function PageTemplate({ data }) {
         <div style={{ width: 300, flexShrink: 0 }} />
         <div className="blog-post">
           <h1>{strapiPost.title}</h1>
-          <div className="blog-post-content">{strapiPost.body}</div>
+          <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: md.render(body) }}
+          />
         </div>
         <div style={{ width: 300, flexShrink: 0 }} />
       </div>

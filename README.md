@@ -13,8 +13,8 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 **Day 5**: Lottie animations\
 **Day 6**: Gatsby - Static site generation\
 **Day 7**: Modals with React Portal\
-**Day 8**:\
-**Day 9**:\
+**Day 8**: Strapi
+**Day 9**: Vue.js
 **Day 10**:\
 **Day 11**:\
 **Day 12**:\
