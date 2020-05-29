@@ -14,7 +14,7 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 **Day 6**: Gatsby - Static site generation\
 **Day 7**: Modals with React Portal\
 **Day 8**: Strapi
-**Day 9**: Vue.js
+**Day 9**: FCM sending and receiving
 **Day 10**:\
 **Day 11**:\
 **Day 12**:\
