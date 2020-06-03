@@ -15,7 +15,7 @@ The goal of this challenge is to explore new libraries, strengthen my TypeScript
 **Day 7**: Modals with React Portal\
 **Day 8**: Strapi
 **Day 9**: FCM sending and receiving
-**Day 10**:\
+**Day 10**: Basic PWA exploration\
 **Day 11**:\
 **Day 12**:\
 **Day 13**:\

@@ -1,0 +1,25 @@
+{
+  "short_name": "PWA",
+  "name": "PWA: Testing PWA features",
+  "description": "Testing various PWA features, curious where this description will show up. ",
+  "icons": [
+    {
+      "src": "/images/maskable_icon_small.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/maskable_icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "background_color": "#1f3f75",
+  "theme_color": "#1f3f75"
+}
