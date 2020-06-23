@@ -4,7 +4,8 @@
     "react-hooks": "^1.0.1"
   },
   "scripts": {
-    "deploy:blog:github": "cd submissions/day-006-gatsby/blog && npm run build && npm run deploy:github"
+    "start:api:strapi": "cd submissions/day-008-strapi/blogapi && yarn start",
+    "deploy:blog:github": "cd submissions/day-006-gatsby/blog && yarn build && yarn run deploy:github"
   },
   "dependencies": {
     "gatsby-plugin-typescript": "^2.4.0"
